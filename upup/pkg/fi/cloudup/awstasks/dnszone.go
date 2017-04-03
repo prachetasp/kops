@@ -266,9 +266,9 @@ func (_ *DNSZone) RenderTerraform(t *terraform.TerraformTarget, a, e, changes *D
 		//return t.RenderResource("aws_route53_zone", *e.Name, tf)
 	} else {
 		// Same problem here also...
-		if e.PrivateVPC != nil {
-			return fmt.Errorf("Route53 private hosted zones are not supported for terraform")
-		}
+		//if e.PrivateVPC != nil {
+		//	return fmt.Errorf("Route53 private hosted zones are not supported for terraform")
+		//}
 
 		return nil
 	}
